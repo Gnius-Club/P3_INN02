@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Taller: ¡Ingenio en Acción 2.0! Juegos Scratch que Cambian el Mundo (3º Primaria) - Sesión 2</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #2196F3; color: white; text-align: center; padding: 10px; } /* Blue Accent */
+        .activity { margin-bottom: 20px; }
+        .banner {
+            background-color: #2196F3; /* Blue Accent */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+        strong { /* Using strong instead of red span for keywords based on workshop example style */
+            font-weight: bold;
+        }
+         ul, ol {
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .time-title { margin-bottom: 20px; text-align: center; font-size: 1.2em; color: #555;} /* Style for static title */
+         em { /* Style for facilitator notes within dialogue */
+            display: block; /* Puts note on a new line */
+            margin-top: 5px;
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content) {
+                content.style.display = content.style.display === "none" ? "block" : "none";
+            }
+        }
+
+        // Initialize content hidden state on load
+        window.onload = () => {
+             // Ensure all content starts hidden
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Playbook - Taller: ¡Ingenio en Acción 2.0! Juegos Scratch que Cambian el Mundo (3º Primaria) - Sesión 2</h1>
+    </div>
+    <div class="container">
+        <h2 class="time-title">Tiempo efectivo de clase: 40 minutos</h2> <!-- Static Title -->
+
+        <!-- De un Vistazo y Preparación Previa -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('activity_0_content')">
+                <div class="title">📝 De un Vistazo: Sesión 2</div>
+            </div>
+            <div id="activity_0_content" class="content">
+                <table>
+                    <tr>
+                        <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
+                            <strong>🎯 Objetivos:</strong>
+                            <ul>
+                                <li>Recordar las "Restricciones de Juego Scratch" definidas por cada equipo.</li>
+                                <li><strong>Táctica 2:</strong> Generar una gran cantidad de ideas específicas para el videojuego (mecánicas, personajes, escenarios, mensajes ODS) utilizando la técnica 6-3-5.</li>
+                            </ul>
+                            <strong>💡 Tácticas Principales:</strong> 6-3-5 (Adaptado a Ideas de Juego Scratch).
+                            <br><br>
+                            <strong>🔑 Entregable Clave:</strong> Hojas/Tableros con múltiples ideas generadas siguiendo la estructura 6-3-5.
+                        </td>
+                        <td style="width: 50%; padding: 10px;">
+                            <strong>🛠️ Materiales Específicos:</strong>
+                            <ul>
+                                <li>Proyector o pantalla interactiva.</li>
+                                <li>Presentación de diapositivas (Láminas 13-14 detalladas abajo).</li>
+                                <li>Acceso a tablero Miro (o similar) con las "Restricciones de Juego Scratch" de cada equipo visibles y plantillas 6-3-5 preparadas, O hojas de papel grandes con la plantilla 6-3-5 para cada participante.</li>
+                                <li>Marcadores o herramientas de escritura digital.</li>
+                                <li>Temporizador visible.</li>
+                                <li>Ejemplo "Coral Bleaching" para 6-3-5 (Lámina 13).</li>
+                            </ul>
+                             <strong>🔧 Preparación Previa para ESTA Sesión:</strong>
+                            <ol>
+                                <li><strong>Presentación Lista:</strong> Tener listas las Láminas 13 y 14. Asegurarse de que el ejemplo 6-3-5 de Coral Bleaching esté claro.</li>
+                                <li><strong>Plantillas 6-3-5:</strong> Preparar las plantillas (digitales o físicas). Una plantilla típica 6-3-5 tiene 3 columnas (para 3 ideas) y 6 filas (para 6 rondas/participantes). Adaptar si los equipos son más pequeños (ej. 4 participantes -> 4 filas).</li>
+                                <li><strong>Espacio de Trabajo:</strong> Equipos deben tener acceso a sus restricciones de la Sesión 1.</li>
+                                <li><strong>Temporizador:</strong> Tener un temporizador listo (idealmente visible en pantalla).</li>
+                                <li><strong>Música (Opcional):</strong> Preparar música de fondo enérgica pero no distractora.</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Desarrollo de la Sesión -->
+
+        <!-- Actividad 1: Repaso y Conexión -->
+        <div id="activity-1" class="activity" data-time="5">
+            <div class="banner" onclick="toggleContent('activity_1_content')">
+                <div class="title">🔗 Actividad 1: Repaso y Conexión ⏰ Tiempo: 5 minutos</div>
+            </div>
+            <div id="activity_1_content" class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 13 (Inicio - Título):</strong> Título: "¡Sesión 2: Creatividad Desatada - Lluvia de Ideas de Juego!" (Iconos ✨💡🎮), Imagen: Una explosión de ideas coloridas saliendo de un control de videojuego o del gato de Scratch. Texto: "¡Nivel 2: Listos para la carrera de ideas 6-3-5!".
+                        </td>
+                        <td>
+                            "¡Hola, desarrolladores de videojuegos imparables! ¡Listos para el Nivel 2 de nuestra receta 'Ingenio en Acción 2.0'? ¡Hoy vamos a desatar la creatividad al máximo y generar ¡MONTONES de ideas geniales para sus juegos Scratch!"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Pedir a los equipos que revisen sus "Restricciones de Juego Scratch" de la sesión anterior.
+                        </td>
+                        <td>
+                            "Antes de empezar, revisen rápidamente sus tableros de Miro (o papeles). Recuerden las <strong>'Restricciones de Juego Scratch'</strong> que definimos: su Género, su Mecánica Principal y su Mensaje ODS Clave. Esas reglas son nuestro 'patio de juegos creativo' para hoy. ¡Dentro de esos límites, la imaginación no tiene límites!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2: Táctica 2: 6-3-5 -->
+        <div id="activity-2" class="activity" data-time="30">
+            <div class="banner" onclick="toggleContent('activity_2_content')">
+                <div class="title">💡 Actividad 2: Táctica 2: 6-3-5 (Adaptado a Ideas de Juego Scratch) - ¡Carrera de Ideas de Videojuegos en Ráfaga! ⏰ Tiempo: 30 minutos</div>
+            </div>
+            <div id="activity_2_content" class="content">
+                <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 13 (Contenido - Instrucciones):</strong> Título: "Nivel 2: ¡Carrera de Ideas 6-3-5!". Instrucción: "¡Prepárense! Generaremos ¡18 ideas (o más)! Reglas: 3 ideas por ronda (5 min). Ideas sobre: Mecánicas, Personajes/Escenarios, Mensaje ODS. ¡Sin juzgar, solo crear! Pasa tu hoja/tablero al compañero de la derecha.". Imagen: Mostrar una plantilla 6-3-5 simplificada y flechas indicando la rotación. Icono de velocidad ⚡ y cerebro 🧠.
+                        </td>
+                        <td>
+                             "¡Ok, desarrolladores súper veloces, prepárense para la <strong>'Carrera de Ideas de Juego 6-3-5'</strong>! Es una técnica increíble para generar muchísimas ideas en equipo y súper rápido. ¿Cómo funciona?"
+                             <br><br>
+                             "Cada uno tendrá una hoja (o espacio en Miro) con <strong>3 columnas</strong>. En la <strong>primera ronda (5 minutos)</strong>, cada uno escribe <strong>3 ideas iniciales</strong> para su juego, basándose en sus 'Restricciones'. Intenten poner:"
+                             <br>
+                             "  • <strong>Columna 1:</strong> Una idea para la <strong>Mecánica</strong> o cómo se juega (Ej: recoger monedas, esquivar rayos)."
+                             <br>
+                             "  • <strong>Columna 2:</strong> Una idea para un <strong>Personaje o Escenario</strong> genial (Ej: un pulpo robot, una ciudad submarina)."
+                             <br>
+                             "  • <strong>Columna 3:</strong> Una idea de cómo mostrar el <strong>Mensaje ODS</strong> en el juego (Ej: barra de 'contaminación', mensaje al final)."
+                             <br><br>
+                             "¡Importante! No juzguen las ideas, ni las suyas ni las de nadie. <strong>¡Solo escriban rápido!</strong>"
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Explicar la dinámica de rotación y construcción de ideas. Poner temporizador de 5 minutos para la primera ronda.
+                        </td>
+                        <td>
+                            "Cuando suene la alarma (a los 5 min), <strong>pasarán su hoja al compañero de la derecha</strong>. ¡Sí, le pasarán sus ideas a otro!"
+                            <br><br>
+                            "En la <strong>segunda ronda (otros 5 minutos)</strong>, leerán las ideas que les llegaron y <strong>¡las mejorarán o se inspirarán para escribir 3 ideas NUEVAS debajo!</strong> Pueden combinar, cambiar, ¡lo que sea!"
+                            <br><br>
+                            "Y así seguiremos, pasando las hojas y construyendo sobre las ideas de los demás durante varias rondas hasta que llenemos la hoja. ¡Vamos a generar muchísimas ideas juntos!"
+                             <br><br>
+                            "¡Recuerden! Piensen en cómo Scratch puede hacer esto realidad. Piensen en personajes, niveles, desafíos, mensajes... ¡Dejen volar su imaginación videojueguil!"
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 3:</strong> Proyectar la <strong>Diapositiva 14 (Ejemplo Coral Bleaching - ILUSTRACIÓN DE LA TÁCTICA):</strong> Título: "Ejemplo 6-3-5: Ideas para 'Coral Bleaching'". Imagen/Tabla: Mostrar una versión simplificada y visual de la tabla 6-3-5 (quizás las primeras 2-3 rondas) del documento original, destacando cómo las ideas evolucionan o se combinan. Texto: "Así, las ideas se mezclan y crecen en cada ronda, ¡como una bola de nieve creativa!".
+                        </td>
+                        <td>
+                            "Para que vean cómo funciona, miren este ejemplo basado en el juego 'Coral Bleaching'..."
+                            <br><br>
+                             <em>(Explicar brevemente cómo las ideas de la tabla en la Diapositiva 14 evolucionaron, por ejemplo: "Aquí empezaron con un simulador, luego alguien añadió un pez héroe, y después pensaron en diálogos con animales tristes...")</em>
+                            <br><br>
+                            "¿Ven? En cada ronda, tomamos las ideas de antes y las hacemos más grandes o diferentes. ¡Ahora es su turno! ¿Listos? ¡Primera ronda de 5 minutos... <strong>AHORA!</strong>"
+                             <br><br>
+                             <em>(Iniciar temporizador visible. Poner música si se desea. Animar durante los 5 minutos. Indicar claramente cuándo pasar la hoja/tablero. Repetir para 5-6 rondas según el tiempo y tamaño del equipo).</em>
+                             <br><br>
+                             <em>(Consejo Maestro: El ritmo es clave. Sé estricto con los 5 minutos por ronda. Anima a construir sobre las ideas de otros, no solo a poner ideas nuevas desconectadas. Asegúrate de que entienden la rotación).</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 4:</strong> Gestionar las rondas restantes.
+                        </td>
+                        <td>
+                            <em>(Al final de cada ronda de 5 minutos):</em> "¡Tiempo! Pasen su hoja/tablero al compañero de la derecha. Lean las ideas que recibieron... ¡y a generar 3 más! ¡Otros 5 minutos... AHORA!"
+                            <br><br>
+                            <em>(Repetir hasta completar las rondas planificadas).</em>
+                            <br><br>
+                             <em>(Entregable: Hojas/Tableros 6-3-5 llenos con múltiples ideas generadas colaborativamente por cada equipo).</em>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3: Cierre y Preparación -->
+        <div id="activity-3" class="activity" data-time="5">
+            <div class="banner" onclick="toggleContent('activity_3_content')">
+                 <div class="title">🎬 Actividad 3: Cierre y Preparación para la Próxima Sesión ⏰ Tiempo: 5 minutos</div>
+            </div>
+            <div id="activity_3_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Detener la actividad y felicitar a los equipos.
+                        </td>
+                        <td>
+                            "¡TIEMPO! ¡Wow, desarrolladores, miren cuántas ideas han generado! ¡Sus hojas/tableros están LLENOS de creatividad! ¡Han completado la 'Carrera de Ideas 6-3-5'!"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <strong>Paso 2:</strong> Pedir que revisen la última hoja y anticipar la Sesión 3 (Storyboard).
+                        </td>
+                         <td>
+                            "Denle una ojeada rápida a todas las ideas que hay en la última hoja que tienen en sus manos. ¡Hay <strong>oro puro</strong> ahí!"
+                            <br><br>
+                            "En la próxima sesión, ¡vamos a convertir estas ideas en una <strong>historia visual</strong>! Usaremos la táctica <strong>'Storyboard'</strong> para dibujar el guion gráfico de su videojuego paso a paso, ¡como los profesionales!"
+                         </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 3:</strong> Instrucción final para guardar el trabajo.
+                        </td>
+                        <td>
+                             "Guarden bien estas hojas llenas de ideas. Serán su tesoro para la siguiente fase. ¡Gran trabajo de equipo hoy! ¡Nos vemos en la Sesión 3 para dibujar la aventura!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div> <!-- Fin del container -->
+</body>
+</html>
